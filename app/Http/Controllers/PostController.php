@@ -58,7 +58,7 @@ class PostController extends Controller
         return view('admin.posts.edit', compact('post'));
     }
 
-    public function update(StoreUpdateRequest $request, $id)
+    public function update(StoreUpdatePost $request, $id)
     {
         if (!$post = Post::find($id)) {
             return redirect()->route('index');

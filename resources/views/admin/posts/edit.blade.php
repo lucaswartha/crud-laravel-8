@@ -11,9 +11,9 @@
     </ul>
 @endif
 
-<form action="{{ route('update/', $post->id)}}" method="post">
+<form action="{{ route('update', $post->id)}}" method="POST">
     @csrf
-    @method('put')
+    @method('PUT')
     <input type="text" name="title" id="title" placeholder="Título" value="{{ $post->title }}")>
     <textarea name="content" id="content" cols="30" rows="4" placeholder="Conteúdo">{{ $post->content }}</textarea>
     <button type="submit">Enviar</button>
