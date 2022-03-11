@@ -4,7 +4,7 @@
     <li style="list-style: none"> <strong>Descrição: </strong> {{ $post->content }} </li>
 </ul>
 
-<form action="{{ route('destroy', $post->id) }}" method="post">
+<form action="{{ route('posts.destroy', $post->id) }}" method="post">
     @csrf
     <input type="hidden" name="_method" value="DELETE">
     <button type="submit">Deletar o post {{ $post->title }}</button>

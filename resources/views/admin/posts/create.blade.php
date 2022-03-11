@@ -11,7 +11,7 @@
     </ul>
 @endif
 
-<form action="{{ route('store') }}" method="get">
+<form action="{{ route('posts.store') }}" method="get">
     @csrf
     <input type="text" name="title" id="title" placeholder="Título" value="{{ old('title') }}")>
     <textarea name="content" id="content" cols="30" rows="4" placeholder="Conteúdo">{{ old('content') }}</textarea>
